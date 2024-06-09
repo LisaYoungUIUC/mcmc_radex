@@ -8,7 +8,7 @@ The workflow for using these two scripts will be
     temperature) to match your data.
 4. Run sample_radex_output.py and enjoy the plots.
 
-
+![Example corner plot (output of sample_radex_output.py)](ring_radex_mcmc.pdf)
 
 Please cite as follows - thanks!
 
