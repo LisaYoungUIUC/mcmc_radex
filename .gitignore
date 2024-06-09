@@ -4,3 +4,6 @@
 *.out
 *.txt
 *.log
+bestfit_co_v4c.py
+radex_grid5dv2_co.py
+!ring_radex_mcmc.pdf

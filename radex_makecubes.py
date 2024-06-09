@@ -279,7 +279,8 @@ dv = fiducial_dv
 
 # radex function call
 # "radex.inp" is hardwired here in a few places, so best not change that (or change them all)
-radexcall = '/Users/lyoung/software/Radex/bin/radex < radex.inp > /dev/null'
+# output file radex.log can be inspected in case there are difficulties.
+radexcall = '/Users/lyoung/software/Radex/bin/radex < radex.inp > radex.log'
  
 
 #%%
@@ -288,7 +289,10 @@ radexcall = '/Users/lyoung/software/Radex/bin/radex < radex.inp > /dev/null'
 
 start = time.time()
 print('starting calculations for 12CO')
-mole = '12co'
+mole = '12co'     #  heads up: radex will be looking for a file called "12co.dat" that holds
+# the transition probabilities and level degeneracies and so on.  But the default file downloaded
+# from the Leiden web site will be called "co.dat" for 12CO.  I renamed my file because I have
+# multiple isotopologues.
 abun_rat = 1.0 # this is 12co
 # Frequencies of transitions to study.  Radex uses these values to obtain Einstein A values etc.
 flow = 115.3  # GHz
